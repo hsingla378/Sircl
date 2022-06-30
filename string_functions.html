@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Function</title>
+</head>
+<body>
+
+    <script>
+
+        var str = "Himanshu Singla";
+        document.write(str);
+
+        var position = str.indexOf("Singla");
+        document.write(position);
+
+    position = str.lastIndexOf("Singla");
+    document.write(position);
+
+    var substr1 = str.slice(0,8);
+    document.write(substr1);
+
+    var substr2 = str.substring(0,8);
+    document.write(substr2);
+
+    var substr3 = str.substr(0,8);
+    document.write(substr3);
+
+    var replaced = str.replace("Himanshu", "Tushar");
+    document.write(replaced);
+
+    document.write(str.toLowerCase());
+    document.write(str.toUpperCase())
+
+    var fname = "Himanshu";
+    var lname = "Singla";
+
+    var newstring = fname.concat(" ",lname);
+    document.write(newstring);
+
+    var white = "         H         S     Tushar Kumar        ";
+    document.write(white);
+    document.write(white.trim());
+
+    var char3 = str.charAt(0);
+    document.write(char3);
+
+    var char2 = str.charCodeAt(0);
+    document.write(char2);
+
+    document.write(str[0]);
+
+
+
+    </script>
+    
+</body>
+</html>

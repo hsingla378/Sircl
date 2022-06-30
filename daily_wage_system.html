@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Wage System</title>
+</head>
+
+<script>
+
+    function wages(){
+ 
+    var hours = parseInt(document.getElementById("hours").value);
+    var wage;
+
+    if (hours==8){
+        wage = 250;
+    }
+
+    else if(hours>8 && hours<=10){
+        wage = 250 + (hours-8)*50;
+    }
+
+
+    else if(hours>10 && hours<=12){
+        wage = 250 + 100 + (hours-10)*75;
+    }
+
+    
+    else if(hours>12 && hours<=14){
+        wage = 250 + 100 + 150 + (hours-12)*100;
+    }
+
+    else if(hours>14 && hours<=16){
+        wage = 250 + 100 + 150 + 200 + (hours-14)*150;
+    }
+
+    else {
+        alert("Please enter valid number of hours")
+    }
+
+    document.getElementById("wage").value = wage;
+
+}
+
+</script>
+
+<body>
+
+    <table>
+
+        <tr>
+            <td><label for="hours">Enter Working Hour</label></td>
+            <td><input type="number" id="hours" name="hours"></td>
+            <td><input type="submit" id="calc" value="Calculate Wage" onclick="wages()"></td>
+            <td><input type="text" id="wage" name="wage"></td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

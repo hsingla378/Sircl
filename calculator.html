@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        tr {
+            display: flex;
+            flex-direction: row;
+        }
+
+        td {
+            border: black solid px;
+            display: flex;
+            width: 100%;
+        }
+
+        input {
+            padding: 20px;
+            width: 100%;
+        }
+
+        #output {
+            color: black;
+            ;
+            text-align: right;
+            border: solid blue 2px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+
+        var num1;
+        var num2;
+        var r;
+        var op;
+
+        function btn_click(x) // event handler
+        {
+            document.getElementById("output").value += x.value;
+        }
+
+
+        // function btn_click_backspace() {
+        //     document.getElementById("output").value -= x.value;
+        // }
+
+        function btn_click_clear() {
+            document.getElementById("output").value = "";
+        }
+
+
+        function btnop_click(btn) {
+            num1 = Number(document.getElementById("output").value);
+            document.getElementById("output").value = "";
+            op = btn.value;
+            console.log("Num1=" + num1 + " op=" + op);
+        }
+        function btneq_click() {
+            num2 = Number(document.getElementById("output").value);
+            if (op == "+") {
+                r = num1 + num2;
+            }
+            else if (op == "-") {
+                r = num1 - num2;
+            }
+            else if (op == "/") {
+                r = num1 / num2;
+            }
+            else if (op == "*") {
+                r = num1 * num2;
+            }
+            document.getElementById("output").value = r;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <table>
+
+        <tr>
+            <td colspan="6"><input type="text" id="output" name="output" placeholder="0." readonly></td>
+        </tr>
+
+        <tr>
+            <td><input type="button"></td>
+            <td colspan="2"><input type="button" id="backspace" value="Backspace" onclick="btn_click_backspace()"></td>
+            <td colspan="2"><input type="button" id="ce" value="CE"></td>
+            <td colspan="2"><input type="button" id="btnc" value="C" onclick="btn_click_clear()"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" id="mc" value="MC"></td>
+            <td><input type="button" id="7" value="7" onclick="btn_click(this)" accesskey="h"></td>
+            <td><input type="button" id="8" value="8" onclick="btn_click(this)"></td>
+            <td><input type="button" id="9" value="9" onclick="btn_click(this)"></td>
+            <td><input type="button" id="/" value="/" onclick="btnop_click(this)"></td>
+            <td><input type="button" id="sqrt" value="sqrt"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" id="mr" value="MR"></td>
+            <td><input type="button" id="4" value="4" onclick="btn_click(this)"></td>
+            <td><input type="button" id="5" value="5" onclick="btn_click(this)"></td>
+            <td><input type="button" id="6" value="6" onclick="btn_click(this)"></td>
+            <td><input type="button" id="*" value="*" onclick="btnop_click(this)"></td>
+            <td><input type="button" id="%" value="%"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" id="ms" value="MS"></td>
+            <td><input type="button" id="1" value="1" onclick="btn_click(this)"></td>
+            <td><input type="button" id="2" value="2" onclick="btn_click(this)"></td>
+            <td><input type="button" id="3" value="3" onclick="btn_click(this)"></td>
+            <td><input type="button" id="-" value="-" onclick="btnop_click(this)"></td>
+            <td><input type="button" id="1/x" value="1/x"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" id="m+" value="M+"></td>
+            <td><input type="button" id="0" value="0" onclick="btn_click(this)"></td>
+            <td><input type="button" id="+/-" value="+/-"></td>
+            <td><input type="button" id="." value="." onclick="btn_click(this)"></td>
+            <td><input type="button" id="+" value="+" onclick="btnop_click(this)"></td>
+            <td><input type="button" id="btneq" value="=" onclick="btneq_click()"></td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

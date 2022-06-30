@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header{
+    background-color:#BE3144; 
+    padding: 20px 0;
+    border-bottom: black solid 2px;
+    position: sticky;
+    top: 0;
+}
+
+#navbar a{
+    padding: 21px 20px;
+    text-decoration: none;
+    color:white;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+#navbar a:hover{
+    text-decoration: none;
+    background-color:#45567D;
+    color:white;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+#navbar ul{
+    display: flex;
+    justify-content: right;
+}
+
+#navbar li{
+    list-style: none;
+}
+
+#welcome-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+    background-color:#242427;
+}
+
+#welcome-section h1{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+}
+
+#welcome-section p{
+    margin-top: 10px;
+    font-size: 35px;
+    font-weight: 300;
+    color: #BE3144;
+    font-family: 'Lato', sans-serif;
+}
+
+#projects{
+    background-color: #45567D;
+    padding: 50px;
+}
+
+#projects h2{
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    /* border-bottom: 2px solid white;
+    border-bottom-width: inherit; */
+}
+
+.project-tiles{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.project-tiles a{
+ text-decoration: none;
+}
+
+.project-tile{
+    margin: 20px;
+    border-radius: 5px; 
+    
+}
+
+img{
+    
+    width: 100%;
+    object-fit:cover;
+
+}
+
+.tile-bottom{
+    font-size: 20px;
+    text-align: center;
+    background-color: #303841;
+    color: white;
+    padding: 25px 40px;
+}
+
+.tile-bottom span{
+    color: tomato;
+    display: none;
+}
+
+.tile-bottom p, span{
+    display: inline;
+}
+
+@media only screen and (max-width: 500px){
+    .project-tiles{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+#profile_link{
+    text-decoration: none;
+    margin: 50px auto 40px auto;
+    width: 100px;
+    padding: 10px 20px;
+    background-color: #303841;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#profile_link a{
+    text-decoration: none;
+    color: white;
+}
+
+#profile_link:hover{
+    margin: 50px auto 40px auto;
+    width: 100px;
+    padding: 10px 20px;
+    background-color: #BE3144;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#lets_work_together{
+    padding: 50px;
+    background-color: #303841;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#lets_work_together h2{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+#lets_work_together #coffee{
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.61);
+    font-family: 'Lato', sans-serif;
+}
+
+#footer{
+    padding: 40px 80px;
+    background-color: #303841;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.877);
+    font-size: 18px;
+    font-weight:normal;
+    border-top: solid 5px #BE3144;
+}
+
+@media only screen and (max-width: 500px){
+    #footer{
+        padding: 40px;
+        background-color: #303841;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.877);
+        font-size: 18px;
+        font-weight:normal;
+        border-top: solid 5px #BE3144;
+    }
+}
+
+.social_links{
+    font-size: 25px;
+    text-shadow: 2px 2px black ;
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.social_links i{
+    margin-right: 10px;
+}
+
+.social_links a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.social_links ul{
+    list-style: none;
+    display: inline-block;
+}
+
+
+.social_links li{
+    display: inline-block;
+    padding: 15px;
+    transition: transform 0.3s ease-out;
+}

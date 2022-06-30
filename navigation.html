@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+
+    <style>
+
+        header{
+            background-color: brown;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+        }
+
+        .nav-link{
+           padding-right: 50px;
+        }
+
+        #logo{
+            color: white;
+        }
+
+        ul{
+            list-style: none;
+
+        }
+
+        li{
+            display: inline-block;
+        }
+        
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        @media (max-width: 500px){
+            header{
+            background-color: brown;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        *{
+        margin: 0;
+        padding: 0;
+    }
+        .nav-link{
+           padding-right: 0px;
+        }
+
+        #logo{
+            color: white;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        li{
+            display: inline-block;
+        }
+        
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+            <span id="logo">Nav Menu</span>
+        </div>
+
+        <nav>
+            <ul id="menubar">
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="#">Service</a></li>
+                <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <a id="button" href="#">Menu</a>
+        </div>
+
+    </header>
+
+</body>
+
+</html>

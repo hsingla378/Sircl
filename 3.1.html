@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+</head>
+<body>
+    <script>
+    var fname = "Himanshu ";
+    var lname = ' Singla';
+    var name = fname + " " + lname;
+    document.write("My Name is " + name);
+    name = fname.concat(" ",lname);
+    document.write("<br>My Name is " + name);
+
+    var myname = 'My name is \'Himanshu Singla\'';
+    document.write("<br><br>" + myname);
+
+    document.write("<br>"+myname.toLowerCase());
+    document.write("<br>"+myname.toUpperCase());
+
+    document.write("<br>The length of the upper string is "+myname.length) 
+    
+    var trimname = fname.trim() + lname.trim();
+    document.write("<br>"+trimname);
+    
+    var replaced = name.replace("Himanshu", "Tushar");
+    document.write("<br>"+replaced);
+
+    var string3 = "A Blue bottle with a blue liquid is on a blue table";
+    var replacedg = string3.replace("blue", "green");
+    document.write("<br>"+replacedg);
+    
+    var string3 = "A Blue bottle with a blue liquid is on a blue table";
+    var replacedg = string3.replace(/blue/g, "green");
+    document.write("<br>"+replacedg);
+    
+    var replacedg = string3.replace(/blue/gi, "green");
+    document.write("<br>"+replacedg);
+
+    var onlyname = name.substring(0, 8);
+    document.write("<br>"+onlyname);
+
+    var onlyname2 = name.substr(0, 10);
+    document.write("<br>"+onlyname2);
+
+    var onlyname3 = name.substr(10);
+    document.write("<br>"+onlyname3);
+    
+    var onlyname4 = name.slice(0, 10);
+    document.write("<br>"+onlyname4);
+
+    var onlyname5 = name.substr(10);
+    document.write("<br>"+onlyname5);
+
+    var onlyname5 = name.indexOf("Singla");
+    document.write("<br>"+onlyname5);
+
+</script>
+
+</body>
+</html>

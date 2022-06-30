@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Forms</title>
+</head>
+<body>
+
+    <form>
+        <input type="text"><br>
+        <input type="radio"><br>
+        <input type="checkbox"><br>
+        <input type="submit"><br>
+        <input type="button"><br>
+
+        <label for="fname">First Name: </label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name: </label><br>
+        <input type="text" id="lname" name="lname"><br>
+
+    </form>
+
+<form>
+
+    <p>Choose your gender: </p>
+    <input  type="radio" id="man" name="male" value="Male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="female" value="Female">
+    <label for="female">Female</label><br>
+    <input type="Submit" value="Submit">
+
+</form>
+
+<form action="/action_page.php" novalidate>
+    <p> Which Vehicles do you have?</p>
+    <input type="checkbox" id="car" name="car" value="Car">
+    <label type="text" for="car">Car</label><br>
+    <input type="checkbox" id="bike" name="bike" value="bike">
+    <label type="text" for="bike">Bike</label><br>
+    <input type="checkbox" id="cycle" name="cycle" value="cycle">
+    <label type="text" for="cycle">Cycle</label><br><br>
+    <input type="button" value="Submit">
+
+</form><br>
+
+<form>
+    <fieldset>
+        <legend>Gender:</legend>
+    <label for="gender">Choose your gender: </label><br>
+    <select id="gender" name="gender" size="2" multiple>
+        <option value="Male">Male</option>
+        <option value="Female" selected>Female</option>
+        <option value="Other">Other</option>
+    </select>
+</fieldset>
+
+</form><br>
+
+<textarea name="message" rows="10" cols="20">
+Write you message here
+</textarea>
+
+<button type="button">Click Here!</button><br><br>
+
+
+<form>
+    <input list="vehicle">
+    <datalist id="vehicle">
+        <option value="Car">
+        <option value="Bike">
+        <option value="Cycle"></option>
+        </option>
+        </option>
+    </datalist><br><br>
+    <input type="submit">
+</form>
+    
+</body>
+</html>

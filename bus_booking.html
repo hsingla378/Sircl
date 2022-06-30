@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking System</title>
+
+    <script>
+
+        function delux_total() {
+
+            var no_of_child = parseInt(document.getElementById("no_of_child").value);
+            var no_of_young = parseInt(document.getElementById("no_of_young").value);
+            var no_of_old = parseInt(document.getElementById("no_of_old").value);
+
+            fare_of_child = no_of_child * 500;
+            fare_of_young = no_of_young * 700;
+            fare_of_old = no_of_old * 600;
+            total_fare = fare_of_child + fare_of_young + fare_of_old;
+
+            document.getElementById("fare_of_child").value = fare_of_child;
+            document.getElementById("fare_of_young").value = fare_of_young;
+            document.getElementById("fare_of_old").value = fare_of_old;
+
+            document.getElementById("total_fare").value = total_fare;
+
+        }
+
+        function semi_deluxe_total() {
+
+            var no_of_child = parseInt(document.getElementById("no_of_child").value);
+            var no_of_young = parseInt(document.getElementById("no_of_young").value);
+            var no_of_old = parseInt(document.getElementById("no_of_old").value);
+
+            fare_of_child = no_of_child * 400;
+            fare_of_young = no_of_young * 600;
+            fare_of_old = no_of_old * 500;
+            total_fare = fare_of_child + fare_of_young + fare_of_old;
+
+            document.getElementById("fare_of_child").value = fare_of_child;
+            document.getElementById("fare_of_young").value = fare_of_young;
+            document.getElementById("fare_of_old").value = fare_of_old;
+
+            document.getElementById("total_fare").value = total_fare;
+        }
+
+
+        function ordinary_total() {
+
+            var no_of_child = parseInt(document.getElementById("no_of_child").value);
+            var no_of_young = parseInt(document.getElementById("no_of_young").value);
+            var no_of_old = parseInt(document.getElementById("no_of_old").value);
+
+            fare_of_child = no_of_child * 200;
+            fare_of_young = no_of_young * 400;
+            fare_of_old = no_of_old * 300;
+            total_fare = fare_of_child + fare_of_young + fare_of_old;
+
+            document.getElementById("fare_of_child").value = fare_of_child;
+            document.getElementById("fare_of_young").value = fare_of_young;
+            document.getElementById("fare_of_old").value = fare_of_old;
+
+            document.getElementById("total_fare").value = total_fare;
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <table>
+
+        <tr>
+            <td><label for="no_of_child">No. of Child</label></td>
+            <td><input type="number" id="no_of_child" name="no_of_child"></td>
+
+            <td><input type="submit" id="deluxe_fare" value="Deluxe Fare" onclick="delux_total()"></td>
+
+            <td><label for="fare_of_child">Fare of Child</label></td>
+            <td><input type="number" id="fare_of_child" name="fare_of_child"></td>
+        </tr>
+
+        <tr>
+            <td><label for="no_of_young">No. of Young</label></td>
+            <td><input type="number" id="no_of_young" name="no_of_young"></td>
+
+            <td><input type="submit" id="semi_delux_fare" value="Semi Deluxe Fare" onclick="semi_deluxe_total()"></td>
+
+            <td><label for="fare_of_young">Fare of Young</label></td>
+            <td><input type="number" id="fare_of_young" name="fare_of_young"></td>
+        </tr>
+
+        <tr>
+            <td><label for="no_of_old">No. of Old</label></td>
+            <td><input type="number" id="no_of_old" name="no_of_old"></td>
+
+            <td><input type="submit" id="ordinary_fare" value="Ordinary Fare" onclick="ordinary_total()"></td>
+
+            <td><label for="fare_of_old">Fare of Old</label></td>
+            <td><input type="number" id="fare_of_old" name="fare_of_old"></td>
+        </tr>
+
+        <tr>
+            <td><label for="total_fare">Total Fare: </label></td>
+            <td><input type="number" id="total_fare" name="total_fare"></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
